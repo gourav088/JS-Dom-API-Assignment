@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Api Practice</title>
+  </head>
+  <style>
+    body {
+      margin: 0px;
+      padding: 0px;
+      background-color: beige;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #loginForm-Container {
+      display: flex;
+      flex-direction: column;
+      background-color: aquamarine;
+      border-color: #344a73;
+      border-width: 5px 5px 0px 5px;
+      border-style: solid;
+      border-radius: 3px;
+    }
+    #login-Form {
+      padding: 24px;
+      background-color: white;
+    }
+    .heading {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      font-size: 31px;
+      font-family: sans-serif;
+    }
+    .Label {
+      margin: 20px 0 3px 0px;
+      font-family: sans-serif;
+    }
+    .Input {
+      width: -webkit-fill-available;
+      border-radius: 2px;
+      border: 1px solid;
+    }
+    .btn {
+      margin-top: 13px;
+      width: -webkit-fill-available;
+      background-color: #4ac1a3;
+      border: none;
+      padding: 7px;
+      color: white;
+      border-radius: 5px;
+      font-family: sans-serif;
+    }
+    #bottom-Bar {
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+      font-family: sans-serif;
+      font-size: 13px;
+      color: white;
+      background-color: #344a73;
+    }
+  </style>
+  <body>
+    <div id="loginForm-Container"></div>
+    <script>
+      const loginForm = document.createElement("div");
+      loginForm.id = "login-Form";
+      document.getElementById("loginForm-Container").append(loginForm);
+
+      //Heading
+      const heading = document.createElement("p");
+      heading.className = "heading";
+      heading.innerText = "Login";
+      document.getElementById("login-Form").append(heading);
+
+      //Input
+      const emailtext = document.createElement("p");
+      emailtext.className = "Label";
+      emailtext.innerText = "Email";
+      document.getElementById("login-Form").append(emailtext);
+
+      const emailInput = document.createElement("input");
+      emailInput.className = "Input";
+      document.getElementById("login-Form").append(emailInput);
+
+      const passwordText = document.createElement("p");
+      passwordText.className = "Label";
+      passwordText.innerText = "Password";
+      document.getElementById("login-Form").append(passwordText);
+
+      const passwordInput = document.createElement("input");
+      passwordInput.className = "Input";
+      document.getElementById("login-Form").append(passwordInput);
+
+      //Button
+      const btn = document.createElement("button");
+      btn.className = "btn";
+      btn.innerText = "Submit";
+      document.getElementById("login-Form").append(btn);
+
+      //bottom bar
+      const bottomBar = document.createElement("div");
+      bottomBar.id = "bottom-Bar";
+      document.getElementById("loginForm-Container").append(bottomBar);
+
+      const bottomText = document.createElement("div");
+      bottomText.className = "bottom-Text";
+      bottomText.innerText = "Not have an account?";
+      document.getElementById("bottom-Bar").append(bottomText);
+    </script>
+  </body>
+</html>
